@@ -251,22 +251,108 @@
     <section class="section" id="blog">
         <div class="container">
             <h2 class="section-title">Artikel / Blog</h2>
-            <div class="blog-grid">
-                <article class="blog-card">
+            <div class="blog-grid" style="grid-template-columns: 1fr;">
+                <article class="blog-card" style="max-width: 700px; margin: 0 auto;">
                     <span class="date">Sep 2026</span>
-                    <h3>Tips Membuat Website Portfolio yang Menarik untuk Pemula</h3>
-                    <p>Tips praktis: struktur section, pemilihan warna, dan pentingnya responsive design.</p>
+                    <h3>Cara Membuat Form di Index HTML</h3>
+                    <p>Berikut panduan lengkap dan jelas cara membuat form kontak sederhana di file <strong>index.html</strong>.</p>
+                    
+                    <h4 style="margin: 16px 0 8px; font-size: 0.95rem;">1. Buat struktur form dasar</h4>
+                    <p>Gunakan tag <code>&lt;form&gt;</code> sebagai pembungkus. Di dalamnya letakkan label, input, dan tombol.</p>
+                    
+                    <h4 style="margin: 16px 0 8px; font-size: 0.95rem;">2. Tambahkan input yang dibutuhkan</h4>
+                    <p>Contoh input yang umum dipakai:</p>
+                    <ul style="margin: 8px 0 8px 20px; font-size: 0.85rem; color: var(--text-light);">
+                        <li><code>&lt;input type="text"&gt;</code> → untuk nama</li>
+                        <li><code>&lt;input type="email"&gt;</code> → untuk email</li>
+                        <li><code>&lt;textarea&gt;</code> → untuk pesan panjang</li>
+                        <li><code>&lt;button type="submit"&gt;</code> → tombol kirim</li>
+                    </ul>
+                    
+                    <h4 style="margin: 16px 0 8px; font-size: 0.95rem;">3. Contoh kode lengkap</h4>
+                    <pre style="background: #f5f5f5; padding: 12px; border-radius: 8px; font-size: 0.8rem; overflow-x: auto; margin: 8px 0;"><code>&lt;form action="#" method="post"&gt;
+  &lt;div&gt;
+    &lt;label for="nama"&gt;Nama&lt;/label&gt;
+    &lt;input type="text" id="nama" name="nama" required placeholder="Nama lengkap"&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required placeholder="email@contoh.com"&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;label for="pesan"&gt;Pesan&lt;/label&gt;
+    &lt;textarea id="pesan" name="pesan" rows="4" required placeholder="Tulis pesan..."&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+
+  &lt;button type="submit"&gt;Kirim Pesan&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                    
+                    <h4 style="margin: 16px 0 8px; font-size: 0.95rem;">4. Penjelasan atribut penting</h4>
+                    <ul style="margin: 8px 0 8px 20px; font-size: 0.85rem; color: var(--text-light);">
+                        <li><strong>required</strong> → wajib diisi, browser akan menolak jika kosong</li>
+                        <li><strong>id</strong> &amp; <strong>for</strong> → menghubungkan label dengan input (klik label = fokus ke input)</li>
+                        <li><strong>name</strong> → nama data yang dikirim saat form disubmit</li>
+                        <li><strong>placeholder</strong> → teks petunjuk di dalam kotak input</li>
+                        <li><strong>type="email"</strong> → otomatis cek format email</li>
+                    </ul>
+                    
+                    <h4 style="margin: 16px 0 8px; font-size: 0.95rem;">5. Tips tambahan</h4>
+                    <p>Setelah form dibuat, tambahkan CSS agar tampilan rapi (lebar input 100%, jarak antar elemen, dll). Untuk validasi lebih lanjut bisa pakai JavaScript. Form di portfolio ini sudah menerapkan cara di atas.</p>
                 </article>
-                <article class="blog-card">
-                    <span class="date">Agu 2026</span>
-                    <h3>Pengalaman PKL di Degeweb</h3>
-                    <p>Refleksi pengalaman praktik kerja lapangan di Ponorogo, tantangan, dan skill baru yang didapat.</p>
-                </article>
-                <article class="blog-card">
-                    <span class="date">Jul 2026</span>
-                    <h3>Memulai Belajar React.js sebagai Siswa SMK</h3>
-                    <p>Langkah awal mempelajari React.js dari perspektif siswa yang baru kenal JavaScript modern.</p>
-                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section class="section section-alt" id="kontak">
+        <div class="container">
+            <h2 class="section-title">Kontak</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <p>Tertarik berkolaborasi atau bertanya? Hubungi saya melalui kontak di bawah.</p>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span>Email</span>
+                            <a href="mailto:hensa1054@gmail.com">hensa1054@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <span>WhatsApp</span>
+                            <a href="https://wa.me/6282145840363" target="_blank">082145840363</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-school"></i>
+                        <div>
+                            <span>Instansi</span>
+                            <p>SMKN 1 Jenangan</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nama</label>
+                        <input type="text" id="name" name="name" required placeholder="Nama lengkap">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="email@contoh.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subjek</label>
+                        <input type="text" id="subject" name="subject" required placeholder="Subjek pesan">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Tulis pesan..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Kirim Pesan</button>
+                </form>
             </div>
         </div>
     </section>
