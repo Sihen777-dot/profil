@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara Membuat Tombol di HTML | Hensa Losa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/logo-smk.png">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo"><span>Hensa Losa</span></a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html#beranda" class="nav-link">Beranda</a></li>
+                <li><a href="index.html#blog" class="nav-link">Blog</a></li>
+                <li><a href="index.html#kontak" class="nav-link">Kontak</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <a href="index.html#blog" class="back-link">← Kembali ke Portfolio</a>
+            <div class="page-header">
+                <h1>Cara Membuat Tombol di HTML</h1>
+                <p>Sep 2026 · Panduan praktis untuk pemula</p>
+            </div>
+            <div class="article-body">
+                <p>Tombol (button) dipakai untuk aksi seperti kirim form, buka halaman, atau menjalankan JavaScript. Di bawah ini penjelasan lengkap cara membuat tombol di HTML.</p>
+
+                <h3>1. Cara paling sederhana</h3>
+                <p>Gunakan tag <code>&lt;button&gt;</code>:</p>
+                <pre><code>&lt;button&gt;Klik Saya&lt;/button&gt;</code></pre>
+
+                <h3>2. Jenis type tombol</h3>
+                <ul>
+                    <li><code>type="button"</code> — tombol biasa (tidak submit form)</li>
+                    <li><code>type="submit"</code> — mengirim data form</li>
+                    <li><code>type="reset"</code> — mengosongkan form</li>
+                </ul>
+                <pre><code>&lt;button type="button"&gt;Tombol Biasa&lt;/button&gt;
+&lt;button type="submit"&gt;Kirim&lt;/button&gt;
+&lt;button type="reset"&gt;Reset&lt;/button&gt;</code></pre>
+
+                <h3>3. Tombol dengan link (buka halaman lain)</h3>
+                <p>Bisa pakai tag <code>&lt;a&gt;</code> yang diberi class tombol, atau bungkus button di dalam link:</p>
+                <pre><code>&lt;a href="kontak.html" class="btn"&gt;Hubungi Saya&lt;/a&gt;
+
+&lt;!-- atau --&gt;
+&lt;a href="https://wa.me/6283166181513"&gt;
+  &lt;button type="button"&gt;Chat WhatsApp&lt;/button&gt;
+&lt;/a&gt;</code></pre>
+
+                <h3>4. Contoh kode lengkap + CSS sederhana</h3>
+                <pre><code>&lt;!-- HTML --&gt;
+&lt;button type="button" class="btn-primary"&gt;Kirim Pesan&lt;/button&gt;
+
+&lt;!-- CSS --&gt;
+&lt;style&gt;
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+&lt;/style&gt;</code></pre>
+
+                <h3>5. Langkah pembuatan</h3>
+                <ol>
+                    <li>Buka file <code>index.html</code> di editor (VS Code).</li>
+                    <li>Tulis tag <code>&lt;button&gt;...&lt;/button&gt;</code> di tempat yang diinginkan.</li>
+                    <li>Tambahkan atribut <code>type</code> sesuai kebutuhan (<code>button</code> / <code>submit</code>).</li>
+                    <li>Beri class (misalnya <code>btn-primary</code>) agar mudah di-style.</li>
+                    <li>Tulis CSS: warna, padding, border-radius, dan efek hover.</li>
+                    <li>Simpan, lalu buka di browser untuk melihat hasilnya.</li>
+                </ol>
+
+                <h3>6. Tips</h3>
+                <ul>
+                    <li>Gunakan <code>cursor: pointer</code> agar mouse berubah saat diarahkan ke tombol.</li>
+                    <li>Tambahkan <code>:hover</code> supaya ada feedback visual saat diklik/diarahkan.</li>
+                    <li>Untuk aksesibilitas, pastikan teks tombol jelas (bukan hanya ikon tanpa label).</li>
+                    <li>Di portfolio ini, tombol "Hubungi Saya" dan "Lihat Karya" memakai cara di atas.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-name">Hensa Losa</p>
+            <p class="footer-desc">Junior Web Developer | Siswa RPL SMKN 1 Jenangan</p>
+            <p class="footer-copy">&copy; 2026 Hensa Losa. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

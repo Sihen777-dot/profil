@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara Membuat Form di Index HTML | Hensa Losa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/logo-smk.png">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo"><span>Hensa Losa</span></a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html#beranda" class="nav-link">Beranda</a></li>
+                <li><a href="index.html#blog" class="nav-link">Blog</a></li>
+                <li><a href="index.html#kontak" class="nav-link">Kontak</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <a href="index.html#blog" class="back-link">← Kembali ke Portfolio</a>
+            <div class="page-header">
+                <h1>Cara Membuat Form di Index HTML</h1>
+                <p>Sep 2026 · Panduan praktis untuk pemula</p>
+            </div>
+            <div class="article-body">
+                <p>Form adalah bagian penting di website, misalnya untuk kontak, login, atau pendaftaran. Di bawah ini penjelasan lengkap cara membuat form sederhana langsung di file <strong>index.html</strong>.</p>
+
+                <h3>1. Buat struktur form dasar</h3>
+                <p>Gunakan tag <code>&lt;form&gt;</code> sebagai pembungkus. Di dalamnya letakkan label, input, dan tombol kirim.</p>
+
+                <h3>2. Tambahkan input yang dibutuhkan</h3>
+                <p>Contoh input yang sering dipakai:</p>
+                <ul>
+                    <li><code>&lt;input type="text"&gt;</code> → untuk nama</li>
+                    <li><code>&lt;input type="email"&gt;</code> → untuk email</li>
+                    <li><code>&lt;textarea&gt;</code> → untuk pesan panjang</li>
+                    <li><code>&lt;button type="submit"&gt;</code> → tombol kirim</li>
+                </ul>
+
+                <h3>3. Contoh kode lengkap</h3>
+                <pre><code>&lt;form action="#" method="post"&gt;
+  &lt;div&gt;
+    &lt;label for="nama"&gt;Nama&lt;/label&gt;
+    &lt;input type="text" id="nama" name="nama" required placeholder="Nama lengkap"&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required placeholder="email@contoh.com"&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;label for="pesan"&gt;Pesan&lt;/label&gt;
+    &lt;textarea id="pesan" name="pesan" rows="4" required placeholder="Tulis pesan..."&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+
+  &lt;button type="submit"&gt;Kirim Pesan&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+                <h3>4. Penjelasan atribut penting</h3>
+                <ul>
+                    <li><strong>required</strong> — wajib diisi; browser akan menolak jika kosong</li>
+                    <li><strong>id</strong> &amp; <strong>for</strong> — menghubungkan label dengan input (klik label = fokus ke input)</li>
+                    <li><strong>name</strong> — nama data yang dikirim saat form disubmit</li>
+                    <li><strong>placeholder</strong> — teks petunjuk di dalam kotak input</li>
+                    <li><strong>type="email"</strong> — otomatis cek format email</li>
+                </ul>
+
+                <h3>5. Cara pembuatan (langkah demi langkah)</h3>
+                <ol>
+                    <li>Buka file <code>index.html</code> di VS Code atau editor lain.</li>
+                    <li>Di bagian yang diinginkan (misalnya section Kontak), tulis tag <code>&lt;form&gt;...&lt;/form&gt;</code>.</li>
+                    <li>Isi form dengan label + input sesuai kebutuhan (nama, email, pesan).</li>
+                    <li>Tambahkan atribut <code>required</code> agar field wajib diisi.</li>
+                    <li>Buat tombol dengan <code>&lt;button type="submit"&gt;</code>.</li>
+                    <li>Simpan file, lalu buka di browser untuk menguji form.</li>
+                    <li>(Opsional) Tambahkan CSS agar form rapi: lebar 100%, padding, margin antar elemen.</li>
+                    <li>(Opsional) Tambahkan JavaScript untuk validasi lebih lanjut atau menampilkan pesan sukses.</li>
+                </ol>
+
+                <h3>6. Tips tambahan</h3>
+                <p>Form di portfolio ini sudah menerapkan cara di atas. Setelah form dibuat, pastikan tampilan responsive di HP dan desktop. Untuk mengirim data sungguhan (ke email/server) biasanya butuh backend (PHP, Node.js, dll) atau layanan seperti Formspree.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-name">Hensa Losa</p>
+            <p class="footer-desc">Junior Web Developer | Siswa RPL SMKN 1 Jenangan</p>
+            <p class="footer-copy">&copy; 2026 Hensa Losa. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
